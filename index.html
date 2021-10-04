@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,15 +27,25 @@
                 <input type="text" id="nome" name="nome" required>
                 <label for="Sobrenome">Sobrenome:</label>
                 <input type="text" id="Sobrenome" name="Sobrenome" required><br><br>
-                <label for="sexo">Qual gênero você se identifica:</label><br>               
-                <input type="radio" id="feminino" name="feminino">
-                <label for="feminino">Feminino</label><br>
-                <input type="radio" id="masculino" name="masculino">
-                <label for="masculino">Masculino</label><br><br>
+                
+                <label for="gen">Qual gênero você se identifica:</label><br>               
+                <input type="radio" id="feminino" name="gen">
+                <label for="gen">Feminino</label><br>
+                <input type="radio" id="masculino" name="gen">
+                <label for="gen">Masculino</label><br>
+                <input type="radio" id="cisgenero" name="gen">
+                <label for="gen">Cisgênero</label><br>
+                <input type="radio" id="transgenero" name="gen">
+                <label for="gen">Transgênero</label><br>
+                <input type="radio" id="nbinario" name="gen">
+                <label for="gen">Não binário</label><br>
+                <input type="radio" id="outro" name="gen">
+                <label for="gen">Outro</label><br><br>
+
                 <label for="cpf">CPF:</label>
-                <input type="tel" id="cpf" name="cpf" size="11" required>
+                <input type="tel" id="cpf" name="cpf" size="11" placeholder="000.000.000-00" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" required>
                 <label for="tel">Telefone:</label>
-                <input type="tel" id="tel" name="telefone" required>
+                <input type="tel" id="tel" name="telefone" placeholder="(11)98765-4321" pattern="([0-9]{2})[0-9]{5}-[0-9]{4}" required>
                 <label for="nascimento">Data de nascimento:</label>
                 <input type="date" id="nascimento" name="nascimento" placeholder="dd-mm-yyyy" required>
             </form>
@@ -45,7 +55,7 @@
             </legend>
             <form action="">
                 <label for="cep">CEP:</label>
-                <input type="number" id="cep" name="CEP" required>
+                <input type="number" id="cep" name="CEP" placeholder="00.000-000" pattern="[0-9]{2}.[0-9]{3}-[0-9]{3}" required>
                 <label for="rua">Rua:</label>
                 <input type="text" id="rua" name="rua" required>
                 <label for="numero">Número:</label>
@@ -54,6 +64,7 @@
                 <input type="text" id="cidade" name="cidade" required>
                 <label for="estado">Estado:</label>
                 <select id="estado" name="estado">
+                    <option value="nd">-- Selecione --</option>
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
